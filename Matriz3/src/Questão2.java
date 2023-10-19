@@ -12,16 +12,14 @@ public class Questão2 {
 		System.out.println("Qual o tamanho da matriz? ");
 		tamanho = sc.nextInt();
 		
-		int matriz [][] = new int [tamanho][tamanho], diagonal[][] = new int [tamanho][tamanho], confirma;
+		int matriz [][] = new int [tamanho][tamanho], diagonal[][] = new int [tamanho][tamanho];
 		
 		System.out.println("Escreva os valores da matriz: ");
 		for(int linha = 0; linha < tamanho; linha++) {
 			for(int coluna = 0; coluna < tamanho; coluna++) {
 				matriz[linha][coluna] = sc.nextInt();
-				
-				confirma = tamanho - 1;
-				
-				if (linha == coluna || linha + coluna == confirma) {
+			
+				if (linha == coluna || linha + coluna == tamanho - 1) {
 					diagonal[linha][coluna] = matriz[linha][coluna];	
 				}
 			}
